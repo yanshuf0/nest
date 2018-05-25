@@ -11,7 +11,7 @@ export class UserService {
     return await this.userModel.findOne({username: user.username});
   }
 
-  async create(user: User) {
+  async create(user: any) {
     const model = await this.userModel.create(user);
     return model;
   }

@@ -28,10 +28,7 @@ export class AuthService {
 
   async signup(authDto: AuthDto) {
     const hash = await bcrpyt.hash(authDto.password, 1);
-    const user: any = {};
-    user.username = authDto.username;
-    user.password = hash;
-    const res = await this.userService.create(user);
+    const res = await this.userService.create({username: authDto.username, password: hash});
     return {message: 'success'};
   }
 }
