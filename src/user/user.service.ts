@@ -10,4 +10,9 @@ export class UserService {
   async findOne(user: any): Promise<User> {
     return await this.userModel.findOne({username: user.username});
   }
+
+  async create(user: User) {
+    const model = await this.userModel.create(user);
+    return model;
+  }
 }
