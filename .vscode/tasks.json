@@ -7,6 +7,11 @@
       "label": "build",
       "type": "shell",
       "command": "tsc",
+      "presentation": {
+        "reveal": "never",
+        "focus": false,
+        "panel": "shared"
+      }
     }
   ]
 }
